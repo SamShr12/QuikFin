@@ -1,11 +1,22 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+'use client';
+import { Dashboard, Nav, Navigation } from '@/components';
 
 export default function HomePage() {
   return (
-    <>
-      <Welcome />
-      <ColorSchemeToggle />
-    </>
+    <div
+      style={{
+        display: 'flex',
+      }}
+    >
+      <Nav />
+      <div
+        style={{
+          width: '100%',
+        }}
+      >
+        <Navigation productName="Dashboard" addLink="/products/add" />
+        <Dashboard />
+      </div>
+    </div>
   );
 }

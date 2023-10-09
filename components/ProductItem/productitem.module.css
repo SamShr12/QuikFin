@@ -1,0 +1,99 @@
+.callFlex{
+    display: flex;
+}
+
+.bottom{
+    border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+.bottom:hover{
+  background: light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+
+}
+
+.color_gray{
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}
+
+.root {
+    position: relative;
+  }
+
+  .label {
+    /* position: absolute;
+    z-index: 2;
+    top: rem(7px); */
+    left: var(--mantine-spacing-sm);
+    pointer-events: none;
+    color: light-dark(var(--mantine-color-gray-5), var(--mantine-color-dark-3));
+    transition: transform 150ms ease, font-size 150ms ease, color 150ms ease;
+  
+    &[data-floating] {
+      transform: translate(calc(var(--mantine-spacing-sm) * -1), rem(-28px));
+      font-size: var(--mantine-font-size-xs);
+      font-weight: 500;
+      color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+    }
+  }
+  
+  .required {
+    transition: opacity 150ms ease;
+    opacity: 0;
+  
+    [data-floating] & {
+      opacity: 1;
+    }
+  }
+  
+  .input {
+    &::placeholder {
+      transition: color 150ms ease;
+      color: transparent;
+    }
+  
+    &[data-floating] {
+      &::placeholder {
+        color: var(--mantine-color-placeholder);
+      }
+    }
+  }
+
+  .control {
+    width: rem(200px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+    border-radius: var(--mantine-radius-md);
+    border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-6));
+    transition: background-color 150ms ease;
+    background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-6));
+  
+    &[data-expanded] {
+      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5));
+    }
+  
+    /* @mixin hover {
+      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5));
+    } */
+  }
+
+  .icon {
+    transition: transform 150ms ease;
+    transform: rotate(0deg);
+  
+    [data-expanded] & {
+      transform: rotate(180deg);
+    }
+  }
+
+  .dropdown_text{
+    font-weight: 500;
+    font-size: 5em;
+    font-size: var(--mantine-font-size-sm);
+  }
