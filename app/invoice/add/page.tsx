@@ -1,6 +1,15 @@
-'use client';
 import { AddItemsInvoice, Nav, Navigation, NewInvoice } from '@/components';
-import { Autocomplete, Button, Code, Flex, Grid, Group, TextInput, Title } from '@mantine/core';
+import {
+  Autocomplete,
+  Button,
+  Code,
+  Flex,
+  Grid,
+  GridCol,
+  Group,
+  TextInput,
+  Title,
+} from '@mantine/core';
 import classes from './invoiceadd.module.css';
 
 export default function Page() {
@@ -34,17 +43,17 @@ export default function Page() {
               fontWeight: '900',
             }}
           >
-            <Grid.Col span={1} fw={'bolder'}>
+            <GridCol span={1} fw={'bolder'}>
               #
-            </Grid.Col>
-            <Grid.Col span={3}>Item</Grid.Col>
-            <Grid.Col span={3}>Quantity</Grid.Col>
-            <Grid.Col span={3} ta={'center'}>
+            </GridCol>
+            <GridCol span={3}>Item</GridCol>
+            <GridCol span={3}>Quantity</GridCol>
+            <GridCol span={3} ta={'center'}>
               Rate
-            </Grid.Col>
-            <Grid.Col span={2} ta={'right'}>
+            </GridCol>
+            <GridCol span={2} ta={'right'}>
               Amount
-            </Grid.Col>
+            </GridCol>
           </Grid>
           <AddItemsInvoice />
           <TextInput w={'40%'} mt={'lg'} size="lg" label="Total" placeholder="Total" />

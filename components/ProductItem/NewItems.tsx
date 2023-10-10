@@ -1,5 +1,14 @@
 'use client';
-import { Grid, Group, Menu, Text, TextInput, UnstyledButton } from '@mantine/core';
+import {
+  Grid,
+  GridCol,
+  Group,
+  Menu,
+  MenuItem,
+  Text,
+  TextInput,
+  UnstyledButton,
+} from '@mantine/core';
 import classes from './productitem.module.css';
 import { IconChevronDown, IconNotes } from '@tabler/icons-react';
 import { useState } from 'react';
@@ -20,18 +29,18 @@ export default function NewItems() {
   const [selected, setSelected] = useState(data[0]);
 
   const items = data.map((item) => (
-    <Menu.Item
+    <MenuItem
       leftSection={<IconNotes width={18} height={18} />}
       onClick={() => setSelected(item)}
       key={item.label}
     >
       {item.label}
-    </Menu.Item>
+    </MenuItem>
   ));
 
   return (
-    <Grid className={classes.bottom}>
-      <Grid.Col span={6}>
+    <Grid className={classes.bottoms}>
+      <GridCol span={6}>
         <TextInput
           label="Item Name"
           placeholder="OMG, it also has a placeholder"
@@ -44,8 +53,8 @@ export default function NewItems() {
           autoComplete="nope"
           size="lg"
         />
-      </Grid.Col>
-      <Grid.Col span={6}>
+      </GridCol>
+      <GridCol span={6}>
         <TextInput
           label="Type"
           placeholder="OMG, it also has a placeholder"
@@ -59,8 +68,8 @@ export default function NewItems() {
           autoComplete="nope"
           size="lg"
         />
-      </Grid.Col>
-      <Grid.Col span={6}>
+      </GridCol>
+      <GridCol span={6}>
         <Menu
           onOpen={() => setOpened(true)}
           onClose={() => setOpened(false)}
@@ -86,8 +95,8 @@ export default function NewItems() {
           </Menu.Target>
           <Menu.Dropdown>{items}</Menu.Dropdown>
         </Menu>
-      </Grid.Col>
-      <Grid.Col span={6}>
+      </GridCol>
+      <GridCol span={6}>
         <TextInput
           label="Rate"
           placeholder="OMG, it also has a placeholder"
@@ -101,7 +110,7 @@ export default function NewItems() {
           pb={'lg'}
           size="lg"
         />
-      </Grid.Col>
+      </GridCol>
     </Grid>
   );
 }

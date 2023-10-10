@@ -1,4 +1,3 @@
-'use client';
 import { Nav, Navigation, NewItems } from '@/components';
 import classes from './newproduct.module.css';
 import { Button, Code, Group } from '@mantine/core';

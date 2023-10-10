@@ -1,7 +1,6 @@
-'use client';
 import { Nav, Navigation, ProductItem } from '@/components';
 import classes from './product.module.css';
-import { Grid } from '@mantine/core';
+import { Grid, GridCol } from '@mantine/core';
 
 export default function Page() {
   return (
@@ -17,18 +16,18 @@ export default function Page() {
         <Navigation productName="Products" addLink="/products/add" />
         <div>
           <Grid className={classes.bottom}>
-            <Grid.Col span={2} style={{ fontSize: '18px' }}>
+            <GridCol span={2} style={{ fontSize: '18px' }}>
               #
-            </Grid.Col>
-            <Grid.Col span={3} ta={'center'} style={{ fontSize: '18px' }}>
+            </GridCol>
+            <GridCol span={3} ta={'center'} style={{ fontSize: '18px' }}>
               Item name
-            </Grid.Col>
-            <Grid.Col span={3} ta={'center'} style={{ fontSize: '18px' }}>
+            </GridCol>
+            <GridCol span={3} ta={'center'} style={{ fontSize: '18px' }}>
               Unit
-            </Grid.Col>
-            <Grid.Col ta={'right'} span={3} style={{ fontSize: '18px' }}>
+            </GridCol>
+            <GridCol ta={'right'} span={3} style={{ fontSize: '18px' }}>
               Rate
-            </Grid.Col>
+            </GridCol>
           </Grid>
         </div>
         <div>

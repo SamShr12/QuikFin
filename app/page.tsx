@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 import { Dashboard, Nav, Navigation } from '@/components';
 
 export default function HomePage() {

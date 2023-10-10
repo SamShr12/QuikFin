@@ -1,5 +1,5 @@
 'use client';
-import { Grid, Group, Menu, Text, TextInput, UnstyledButton } from '@mantine/core';
+import { Grid, GridCol, Group, Menu, Text, TextInput, UnstyledButton } from '@mantine/core';
 import classes from './proddet.module.css';
 import { useState } from 'react';
 import { IconChevronDown, IconNotes } from '@tabler/icons-react';
@@ -31,7 +31,7 @@ export default function ProductDetail() {
     <div style={{ padding: '1rem' }}>
       <div>
         <Grid className={classes.bottom}>
-          <Grid.Col span={6}>
+          <GridCol span={6}>
             <TextInput
               label="Item Name"
               placeholder="OMG, it also has a placeholder"
@@ -44,8 +44,8 @@ export default function ProductDetail() {
               autoComplete="nope"
               size="lg"
             />
-          </Grid.Col>
-          <Grid.Col span={6}>
+          </GridCol>
+          <GridCol span={6}>
             <TextInput
               label="Type"
               placeholder="OMG, it also has a placeholder"
@@ -59,8 +59,8 @@ export default function ProductDetail() {
               autoComplete="nope"
               size="lg"
             />
-          </Grid.Col>
-          <Grid.Col span={6}>
+          </GridCol>
+          <GridCol span={6}>
             <Menu
               onOpen={() => setOpened(true)}
               onClose={() => setOpened(false)}
@@ -86,8 +86,8 @@ export default function ProductDetail() {
               </Menu.Target>
               <Menu.Dropdown>{items}</Menu.Dropdown>
             </Menu>
-          </Grid.Col>
-          <Grid.Col span={6}>
+          </GridCol>
+          <GridCol span={6}>
             <TextInput
               label="Rate"
               placeholder="OMG, it also has a placeholder"
@@ -101,7 +101,7 @@ export default function ProductDetail() {
               pb={'lg'}
               size="lg"
             />
-          </Grid.Col>
+          </GridCol>
         </Grid>
       </div>
     </div>
